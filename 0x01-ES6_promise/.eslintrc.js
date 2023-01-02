@@ -27,7 +27,7 @@ module.exports = {
       ],
     },
     overrides:[
-      {0    
+      {    
         files: ['*.js'],
         excludedFiles: 'babel.config.js',
       }
