@@ -9,11 +9,7 @@ export default class ClassRoom {
   }
 
   set code(value) {
-    if (typeof value !== 'string') {
-      throw TypeError('Code must be a string');
-    } else {
-      this._code = value;
-    }
+    this._code = value;
   }
 
   get name() {
@@ -21,11 +17,7 @@ export default class ClassRoom {
   }
 
   set name(value) {
-    if (typeof value !== 'string') {
-      throw TypeError('Name must be a string');
-    } else {
-      this._name = value;
-    }
+    this._name = value;
   }
 
   displayFullCurrency() {
