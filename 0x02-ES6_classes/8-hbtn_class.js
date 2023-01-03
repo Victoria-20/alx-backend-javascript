@@ -4,7 +4,7 @@ export default class HolbertonClass {
     this._location = location;
   }
 
-  [HolbertonClass.toPrimitive](hint) {
+  [this.toPrimitive](hint) {
     if (hint === 'string') {
       return this._location;
     } if (hint === 'number') {
