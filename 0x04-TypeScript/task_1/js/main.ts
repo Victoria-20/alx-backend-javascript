@@ -6,3 +6,7 @@ interface Teacher {
     location: string,
     [index: number]: boolean
 }
+
+interface Directors extends Teacher {
+    numberOfReports: number
+}
