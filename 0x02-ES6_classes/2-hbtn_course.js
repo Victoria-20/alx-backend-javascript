@@ -1,43 +1,49 @@
-export default class ClassRoom {
+export default class HolbertonCourse {
   constructor(name, length, students) {
-    this._name = name;
-    this._length = length;
+    if (typeof name === 'string') {
+      this._name = name;
+    } else {
+      throw TypeError('Name must be a string');
+    }
+
+    if (Number.isInteger(length)) {
+      this._length = length;
+    } else {
+      throw TypeError('Length must be a number');
+    }
+
     this._students = students;
   }
 
-  get nam() {
+  get name() {
     return this._name;
   }
 
-  set nam(value) {
-    if (typeof value !== 'string') {
-      throw TypeError('Name must be a string');
+  set name(name) {
+    if (typeof name === 'string') {
+      this._name = name;
     } else {
-      this._name = value;
+      throw TypeError('Name must be a string');
     }
   }
 
-  get len() {
+  get length() {
     return this._length;
   }
 
-  set len(value) {
-    if (typeof value !== 'number') {
-      throw TypeError('Length must be a number');
+  set length(length) {
+    if (Number.isInteger(length)) {
+      this._length = length;
     } else {
-      this._length = value;
+      throw TypeError('Length must be a number');
     }
   }
 
-  get stud() {
+  get students() {
     return this._students;
   }
 
-  set stud(value) {
-    if (typeof value !== 'object') {
-      throw TypeError('Students must be an array of strings');
-    } else {
-      this._students = value;
-    }
+  set students(students) {
+    this._students = students;
   }
 }
