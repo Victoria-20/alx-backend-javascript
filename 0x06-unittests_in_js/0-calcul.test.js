@@ -5,17 +5,23 @@ const calculateNumber = require("./0-calcul");
 // Describe the test suite
 describe('calculate Numbers', function() {
   // Describe the test case
-  it('should add two rounded numbers together', function() {
-    // Define the inputs
-    const num1 = 1;
-    const num2 = 3.7;
-
-    // Define the expected output
-    const expected = 5;
-
-    // Call the function and store the result
-    const result = calculateNumber(num1, num2);
+  it('whole numbers', () => {
     // Assert that the result matches the expected output
-    assert.equal(result, expected);
+    assert.strictEqual(calculateNumber(1, 3), 4);
+  });
+
+  it('whole numbers', () => {
+    // Assert that the result matches the expected output
+    assert.strictEqual(calculateNumber(1, 3.7), 5);
+  });
+
+  it('whole floating numbers', () => {
+    // Assert that the result matches the expected output
+    assert.strictEqual(calculateNumber(1.2, 3.7), 5);
+  });
+
+  it('whole floating numbers', () => {
+    // Assert that the result matches the expected output
+    assert.strictEqual(calculateNumber(1.5, 3.7), 6);
   });
 });
