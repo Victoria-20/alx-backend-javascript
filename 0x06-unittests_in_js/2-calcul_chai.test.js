@@ -1,5 +1,5 @@
 // Import assert
-const expect = require('chai');
+const expect = require('chai').expect;
 const calculateNumber = require("./2-calcul_chai");
 
 // Describe the test suite
