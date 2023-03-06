@@ -24,4 +24,8 @@ describe('calculate Numbers', function() {
     // Assert that the result matches the expected output
     assert.strictEqual(calculateNumber(1.5, 3.7), 6);
   });
+
+  it('fractional numbers with trailing 9\'s', () => {
+    assert.strictEqual(calculateNumber(2.499999, 3.499999), 5);
+  });
 });
