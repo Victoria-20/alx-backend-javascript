@@ -28,4 +28,3 @@ describe('sendPaymentRequestToApi', () => {
     expect(consoleSpy.calledWith('The total is: 20')).to.be.true;
   });
 });
-
