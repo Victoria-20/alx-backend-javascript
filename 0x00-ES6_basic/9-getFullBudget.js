@@ -1,6 +1,4 @@
-/* eslint no-shadow: ["error", { "hoist": "functions" }] */
-/* eslint-env es6 */
-
+// eslint-disable-next-line import/extensions
 import getBudgetObject from './7-getBudgetObject';
 
 export default function getFullBudgetObject(income, gdp, capita) {
